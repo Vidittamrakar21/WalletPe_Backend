@@ -15,10 +15,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
+//@ts-ignore
+const test_1 = __importDefault(require("./routes/test"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)('tiny'));
+app.use('/api', test_1.default);
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         res.json({ "message": "Server is breathing" });
