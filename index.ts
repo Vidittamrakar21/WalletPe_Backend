@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(cors())
 app.use(morgan('tiny'))
 
-app.use('/api', apirouter);
+app.use('/check', apirouter);
 
 app.get('/', async (req:Request , res:Response)=>{
     try {

@@ -21,7 +21,7 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use((0, morgan_1.default)('tiny'));
-app.use('/api', test_1.default);
+app.use('/check', test_1.default);
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         res.json({ "message": "Server is breathing" });
